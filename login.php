@@ -50,7 +50,7 @@
                                     <input class="form-check-input" type="checkbox"> Remember me
                                 </div>
                                 <center>
-                                    <button  class="btn btn-dark" name="login">Login</button>
+                                    <button  class="btn btn-dark btn-block" name="login">Login</button>
                                 </center>
                                 <p class="text-center mt-3">Don't have an account <a href="registration.php"><b>Sign Up</b></a></p>
                             </form>
