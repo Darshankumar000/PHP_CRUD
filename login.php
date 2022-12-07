@@ -39,7 +39,7 @@
                                         }
                                     ?>
                                     <label for="email">Email address:</label>
-                                    <input type="text" name="uname" class="form-control" placeholder="Enter email" id="email">
+                                    <input type="text" name="email" class="form-control" placeholder="Enter email" id="email">
                                 </div>
                                 <div class="form-group">
                                     <label for="pwd">Password:</label>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,27 +29,27 @@
                 <div class=" col-12 col-md-8 col-lg-6 col-xl-5 ">
                     <div class="box_color card rounded">
                         <div class="card-body p-4 ">
-                            <form class="m-3 ">
+                            <form class="m-3 " action="insert_reg.php" role="form" method="post" >
                                 <p class="h3 text-center mb-4 text-dark ">Sign Up</p>
                                 <div class="form-group">
                                     <label for="text">User Name:</label>
-                                    <input type="text" class="form-control" placeholder="Enter Username" id="email">
+                                    <input type="text" name="uname" class="form-control" placeholder="Enter Username" id="email">
                                 </div>
                                 <div class="form-group">
                                     <label for="text">Mobile No:</label>
-                                    <input type="text" class="form-control" placeholder="Enter email" id="email">
+                                    <input type="text" name="mobile" class="form-control" placeholder="Enter email" id="email">
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email address:</label>
-                                    <input type="email" class="form-control" placeholder="Enter email" id="email">
+                                    <input type="email" name="email" class="form-control" placeholder="Enter email" id="email">
                                 </div>
                                 <div class="form-group">
                                     <label for="pwd">Password:</label>
-                                    <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                                    <input type="password" name="password" class="form-control" placeholder="Enter password" id="pwd">
                                 </div>
                                 <div class="form-group">
                                     <label for="pwd">Confirm Password:</label>
-                                    <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                                    <input type="password" name="cpassword" class="form-control" placeholder="Enter password" id="pwd">
                                 </div>
 
                                 <center>

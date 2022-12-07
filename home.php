@@ -1,7 +1,7 @@
 <?php
     session_start();
     //echo $_SESSION['uname'];
-    if($_SESSION['uname']!=null)
+    if($_SESSION['email']!=null)
     {
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,10 @@
 </head>
 <body>
     <h1>Welcome to home page</h1>
+    <?php echo $_SESSION['email']; ?>
+    <br>
     <a href="logout.php"><button >Logout </button></a>
+
 </body>
 </html>
 
