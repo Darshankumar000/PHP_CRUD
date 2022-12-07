@@ -4,11 +4,12 @@
     //echo $_SESSION['email'];
     if($_SESSION['email']!=null)
     {
-        $id=$_GET['id'];
-        $sql="select * from user where id=$id";
-        //echo $id;
+        $id = $_GET['id'];
+        $sql = "Select * from user where id =$id";
+        // echo $sql;
         $res = mysqli_query($conn,$sql);
-        if(mysqli_num_rows($res)>0){
+        if(mysqli_num_rows($res)>0)
+        {
             $data = mysqli_fetch_array($res);
         }
         
@@ -29,7 +30,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8  m-5 ">
                 <table class="table table-bordered align-items-center">
-                    <form>
+                    <form role="form" method="POST">
                         <tr class="text-center">
                             <th colspan="2">Update your data</th>
                         </tr>
@@ -81,13 +82,27 @@
 </body>
 </html>
 <?php
+        if(isset($_POST['update']))
+        {
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $mobile = $_POST['mobile'];
+            $sql = "update user set Name = '$name', Email = '$email', Mobile='$mobile' where id= '$id'";
+
+            $res=mysqli_query($conn,$sql);
+            if($res)
+            {
+            header("Location:adminUser.php");
+
+            }
+            else{
+                echo"<script>alert('Something went worng...')</script>";
+            }
+        }  
     }
-    else{
+    else
+    {
         header("Location:login.php");
     }
 ?>
 
-<?php
-    
-
-?>

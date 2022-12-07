@@ -91,7 +91,7 @@
                 <td><?php echo $data['Email']; ?></td>
                 <td><?php echo $data['Password']; ?></td>
                 <td><a href="adminUserUpdate.php?id=<?php echo $data['id'];?>"><i class="fa fa-pencil" style="font-size:24px"></i></a></td>
-                <td><a href=""><i class="fa fa-trash-o" style="font-size:24px;color:red"></a></i></td>
+                <td><a href="adminUserDelete.php?id=<?php echo $data['id'];?>"><i class="fa fa-trash-o" style="font-size:24px;color:red"></a></i></td>
             </tr>
             <?php
                 
