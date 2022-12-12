@@ -18,6 +18,18 @@
     <br>
     <a href="logout.php"><button >Logout </button></a>
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Cookies Value:</h1>
+    <lable>Name:</lable>
+    <?php echo isset($_COOKIE['email'])?$_COOKIE['email']:""; ?>
+    <br>
+    <lable>Password:</lable>
+    <?php echo isset($_COOKIE['password'])?$_COOKIE['password']:""; ?>
+    <br>
+    <br>
 </body>
 </html>
 

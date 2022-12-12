@@ -1,9 +1,9 @@
 <?php
     session_start();
-    include_once 'conn.php';
     //echo $_SESSION['email'];
-    if($_SESSION['email']!=null)
+    if($_SESSION['email']!=null && $_SESSION['email']=='admin')
     {
+        include_once 'conn.php';
         $id = $_GET['id'];
         $sql = "Delete from user where id =$id";
         // echo $sql;
@@ -16,7 +16,7 @@
         }
     }
     else{
-        header("Location:../index.php");
+        header("Location:login.php");
         exit();
     }
 ?>

@@ -2,7 +2,7 @@
     session_start();
     include_once 'conn.php';
     //echo $_SESSION['email'];
-    if($_SESSION['email']!=null)
+    if($_SESSION['email']!=null && $_SESSION['email']=='admin')
     {
         $id = $_GET['id'];
         $sql = "Select * from user where id =$id";

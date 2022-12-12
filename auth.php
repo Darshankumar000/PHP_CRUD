@@ -17,10 +17,17 @@
         else{
             $sql="select * from user where Email='$email' and Password='$pass'";
             $res=mysqli_query($conn,$sql);
-            $row=mysqli_fetch_array($res);
-            if(is_array($row))
+
+            if($row=mysqli_fetch_array($res))
             {
                 $_SESSION['email']=$email;
+                // echo $_POST['remember'];
+                if(isset($_POST['remember']))
+                {
+                    setcookie("email",$row['Email'],time()+(10),"/");
+                    setcookie("password",$row['Password'],time()+(10),"/");
+
+                }
                 header("Location: home.php");
             }
         }
@@ -30,6 +37,6 @@
         header("Location: login.php?error=Incorrect username or password");
     }
 
-    
-    
+
+
 ?>

@@ -39,15 +39,15 @@
                                         }
                                     ?>
                                     <label for="email">Email address:</label>
-                                    <input type="text" name="email" class="form-control" placeholder="Enter email" id="email">
+                                    <input type="text" name="email" class="form-control" placeholder="Enter email" value="<?php echo isset($_COOKIE['email'])?$_COOKIE['email']:""; ?>"id="email">
                                 </div>
                                 <div class="form-group">
                                     <label for="pwd">Password:</label>
-                                    <input type="password" class="form-control" name="password" placeholder="Enter password" id="pwd">
+                                    <input type="password" class="form-control" name="password" placeholder="Enter password" value="<?php echo isset($_COOKIE['password'])?$_COOKIE['password']:""; ?>" id="pwd">
                                 </div>
                                 <div class="form-group form-check">
                                     <label class="form-check-label"></label>
-                                    <input class="form-check-input" type="checkbox"> Remember me
+                                    <input class="form-check-input" type="checkbox" name="remember" value="remember" checked> Remember me
                                 </div>
                                 <center>
                                     <button  class="btn btn-dark btn-block" name="login">Login</button>
